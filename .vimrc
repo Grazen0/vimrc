@@ -24,11 +24,14 @@ set undofile
 let mapleader = " "
 let maplocalleader = ","
 
-nnoremap <esc> :nohlsearch<cr>
+nnoremap <esc> <cmd>nohl<cr>
+
+" Helix-like mappings
 nnoremap U <c-r>
 nnoremap gh ^
 nnoremap gl $
 
+" Window navigation
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -41,6 +44,10 @@ nnoremap <a-,> <c-w><lt>
 nnoremap <a-.> <c-w>>
 nnoremap <a--> <c-w>-
 nnoremap <a-=> <c-w>+
+
+" Oil-like mappings
+nnoremap - <cmd>Explore<cr>
+autocmd FileType netrw nnoremap <buffer> <c-c> <cmd>Rexplore<cr>
 
 call plug#begin()
 
