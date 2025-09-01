@@ -42,7 +42,10 @@ set tabstop=4
 set termguicolors
 set ttimeout
 set ttimeoutlen=100
+set undodir=$XDG_STATE_HOME/vim/undo
 set undofile
+
+call system('mkdir -p ' . &undodir)
 
 filetype plugin indent on
 syntax enable
